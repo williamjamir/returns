@@ -69,11 +69,11 @@ class Intermediate(object):
             applied_args,
         ))
 
-        new_function_args = []
-        for ind, arg in enumerate(FuncArg.from_callable(self._case_function)):
-            if arg.kind in self._positional_kinds and ind < len(callee_args):
-                new_function_args.append(arg)
-        return new_function_args
+        return [
+            arg
+            for ind, arg in enumerate(FuncArg.from_callable(self._case_function))
+            if arg.kind in self._positional_kinds and ind < len(callee_args)
+        ]
 
     def _applied_named_args(
         self,

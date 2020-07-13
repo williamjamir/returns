@@ -4,7 +4,7 @@ from returns.io import IOSuccess, impure_safe
 
 @impure_safe
 def _function(number: int) -> float:
-    return number / number
+    return 1
 
 
 def test_safe_iosuccess():
