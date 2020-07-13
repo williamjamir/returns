@@ -4,7 +4,7 @@ from returns.result import Success, safe
 
 @safe
 def _function(number: int) -> float:
-    return number / number
+    return 1
 
 
 def test_safe_success():
